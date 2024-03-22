@@ -109,7 +109,6 @@ main {
 .pill-group {
   display: flex;
   flex-direction: column;
-  align-items: start;
   flex-wrap: wrap;
   gap: 1.25rem;
 }
@@ -141,9 +140,11 @@ main {
 .pill-group .pill:nth-child(6n + 1) {
   --pill-accent: var(--bright-blue);
 }
+
 .pill-group .pill:nth-child(6n + 2) {
   --pill-accent: var(--french-violet);
 }
+
 .pill-group .pill:nth-child(6n + 3),
 .pill-group .pill:nth-child(6n + 4),
 .pill-group .pill:nth-child(6n + 5) {
@@ -170,7 +171,11 @@ main {
   fill: var(--gray-900);
 }
 
-@media screen and (max-width: 650px) {
+@media (width <= 600px) {
+  h1 {
+    color: var(--example);
+  }
+
   .content {
     flex-direction: column;
     width: max-content;
@@ -181,5 +186,17 @@ main {
     width: 100%;
     background: var(--red-to-pink-to-purple-horizontal-gradient);
     margin-block: 1.5rem;
+  }
+}
+
+@media (601px <= width <= 1024px) {
+  h1 {
+    color: pink;
+  }
+}
+
+@media (width >= 1025px) {
+  h1 {
+    color: blue;
   }
 }
