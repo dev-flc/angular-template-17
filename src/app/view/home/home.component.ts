@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  title = 'angular-template-17';
+  title = '{ dev : F.L.C }';
   home_documents = DOCUMENTS_HOME;
   onClickReft(url: string) {
     console.log(

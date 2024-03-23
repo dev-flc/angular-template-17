@@ -110,7 +110,7 @@ $angular-template-17-primary: mat.define-palette($color-primary);
 $angular-template-17-accent: mat.define-palette($color-accent);
 $angular-template-17-warn: mat.define-palette($color-warn);
 $angular-template-17-typography: mat.define-typography-config(
-  $font-family: 'Roboto, Helvetica Neue, sans-serif'
+  $font-family: 'Quicksand'
 );
 
 $angular-template-17-theme: mat.define-light-theme(
@@ -124,7 +124,8 @@ $angular-template-17-theme: mat.define-light-theme(
     density: 0
   )
 );
-
+@include mat.core-theme($angular-template-17-theme);
+@include mat.typography-hierarchy($angular-template-17-typography);
 @include mat.all-component-themes($angular-template-17-theme);
 
 html,
