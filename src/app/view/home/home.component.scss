@@ -173,7 +173,7 @@ main {
 
 @media (width <= 600px) {
   h1 {
-    color: var(--example);
+    color: var(--color-primary);
   }
 
   .content {
@@ -191,12 +191,12 @@ main {
 
 @media (601px <= width <= 1024px) {
   h1 {
-    color: pink;
+    color: var(--color-accent);
   }
 }
 
 @media (width >= 1025px) {
   h1 {
-    color: blue;
+    color: var(--color-warn);
   }
 }
