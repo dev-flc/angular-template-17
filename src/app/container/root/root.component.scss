@@ -1,0 +1,19 @@
+body {
+  overflow-x: hidden;
+  margin: 0;
+  position: relative; /* Añadido */
+}
+
+header {
+  position: fixed; /* Añadido */
+  top: 0; /* Añadido */
+  width: 100%; /* Añadido */
+  z-index: 1000; /* Añadido */
+}
+
+footer {
+  position: fixed; /* Añadido */
+  bottom: 0; /* Añadido */
+  width: 100%; /* Añadido */
+  z-index: 1000; /* Añadido */
+}
