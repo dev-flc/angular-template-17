@@ -3,9 +3,32 @@
 @include mat.core();
 
 :root {
+  .--ocean {
+    background-image: linear-gradient(to bottom right, #5b7fff, #33ccfc);
+  }
+  .--night {
+    background-image: linear-gradient(to bottom right, #403f44, #1e1b32);
+  }
+  .--sunset {
+    background-image: linear-gradient(to bottom right, #fdc639, #ff7c60);
+  }
+  .--synthwave {
+    background-image: linear-gradient(to bottom right, #ff9e68, #ff68de);
+  }
+  .--grass {
+    background-image: linear-gradient(to bottom right, #45c270, #21cdc3);
+  }
+  .--purple {
+    background-image: linear-gradient(to bottom right, #6889ff, #c668ff);
+  }
+  .--peach {
+    background-image: linear-gradient(to bottom right, #ff6868, #ff68de);
+  }
+
   --color-primary: #5dade2;
   --color-accent: #58d68d;
   --color-warn: #e74c3c;
+  --color-white: #ffffff;
 }
 
 $color-primary: (
