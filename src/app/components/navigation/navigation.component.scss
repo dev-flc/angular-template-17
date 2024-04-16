@@ -7,14 +7,22 @@
 .sidenav {
   width: 200px;
 }
-
+.mat-toolbar {
+  background-color: transparent;
+}
 .sidenav .mat-toolbar {
   background: inherit;
 }
 
-.mat-toolbar.mat-primary {
-  position: sticky;
+.container-menu {
+  position: fixed;
+  justify-content: space-between;
+
   top: 0;
+}
+
+button {
+  margin-right: 8px;
 }
 
 @include mobile-media {

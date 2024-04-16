@@ -16,30 +16,33 @@
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="container-menu">
-      <span>{{ '{ dev: F.L.C }' }}</span>
-      @if (
-        (currentBreakpoint$ | async) === 'Large' ||
-        (currentBreakpoint$ | async) === 'XLarge'
-      ) {
-        <a href="/home" mat-list-item>Home</a>
-        <a href="#" mat-list-item>Menu Item 2</a>
-        <a href="#" mat-list-item>Menu Item 2</a>
-      }
-
-      @if (
-        (currentBreakpoint$ | async) === 'Medium' ||
-        (currentBreakpoint$ | async) === 'Small' ||
-        (currentBreakpoint$ | async) === 'XSmall'
-      ) {
-        <button
-          type="button"
-          aria-label="Toggle sidenav"
-          mat-icon-button
-          (click)="drawer.toggle()"
-        >
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      <div>
+        <span>{{ '{ dev: F.L.C }' }}</span>
+        @if (
+          (currentBreakpoint$ | async) === 'Large' ||
+          (currentBreakpoint$ | async) === 'XLarge'
+        ) {
+          <a href="/features" mat-button>features</a>
+          <a href="#" mat-button>testimonials</a>
+          <a href="#" mat-button>sponsor</a>
+          <a href="#" mat-button>blog</a>
+          <a href="#" mat-button>Join Discord</a>
+        }
+      </div>
+      <div>
+        <button mat-stroked-button (click)="drawer.toggle()">
+          Download Now
         </button>
-      }
+        @if (
+          (currentBreakpoint$ | async) === 'Medium' ||
+          (currentBreakpoint$ | async) === 'Small' ||
+          (currentBreakpoint$ | async) === 'XSmall'
+        ) {
+          <button mat-icon-button (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+        }
+      </div>
     </mat-toolbar>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
