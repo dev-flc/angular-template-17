@@ -11,7 +11,11 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class ButtonComponent {
   @Input() button_name!: string;
-  @Input() button_color: 'primary' | 'accent' | 'warn' = 'primary';
-  @Input() button_name_icon = 'home';
-  @Input() button_type = 'mat-button';
+  @Input() button_color!: 'primary' | 'accent' | 'warn';
+  @Input() button_name_icon!: string;
+  @Input() btn_class_color_text!:
+    | 'btn-color-white'
+    | 'btn-color-primary'
+    | 'btn-colot-accent'
+    | 'btn-color-warning';
 }
