@@ -1,4 +1,10 @@
-<button mat-button color="{{ button_color }}" class="mat-display-6">
+<button
+  mat-button
+  class="button-rounded mat-display-6 {{ btn_class_color_text }}"
+  color="{{ button_color }}"
+>
   {{ button_name }}
-  <mat-icon>{{ button_name_icon }}</mat-icon>
+  @if (button_name_icon) {
+    <mat-icon>{{ button_name_icon }}</mat-icon>
+  }
 </button>

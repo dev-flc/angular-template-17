@@ -9,9 +9,9 @@
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      @for (data of data_menu; track data.id) {
+        <a mat-list-item href="#">{{ data.label }}</a>
+      }
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
@@ -22,25 +22,31 @@
           (currentBreakpoint$ | async) === 'Large' ||
           (currentBreakpoint$ | async) === 'XLarge'
         ) {
-          <a href="/features" mat-button>features</a>
-          <a href="#" mat-button>testimonials</a>
-          <a href="#" mat-button>sponsor</a>
-          <a href="#" mat-button>blog</a>
-          <a href="#" mat-button>Join Discord</a>
+          @for (data of data_menu; track data.id) {
+            <app-button
+              button_name="{{ data.label }}"
+              (click)="drawer.toggle()"
+              btn_class_color_text="btn-color-white"
+            ></app-button>
+          }
         }
       </div>
       <div>
-        <button mat-stroked-button (click)="drawer.toggle()">
-          Download Now
-        </button>
+        <app-button
+          button_name="Download Now"
+          (click)="drawer.toggle()"
+          btn_class_color_text="btn-color-white"
+        ></app-button>
         @if (
           (currentBreakpoint$ | async) === 'Medium' ||
           (currentBreakpoint$ | async) === 'Small' ||
           (currentBreakpoint$ | async) === 'XSmall'
         ) {
-          <button mat-icon-button (click)="drawer.toggle()">
-            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-          </button>
+          <app-button
+            (click)="drawer.toggle()"
+            button_name_icon="menu"
+            btn_class_color_text="btn-color-white"
+          ></app-button>
         }
       </div>
     </mat-toolbar>
