@@ -1,29 +1,41 @@
-import { MenuNav } from '../interfaces/nav';
+import { IntMenu } from '../interfaces/navigation';
 
-export const MENU_NAV: MenuNav[] = [
+export const MENU_START: IntMenu[] = [
   {
     id: 1,
+    color: 'primary',
     label: 'Feactures',
-    link: 'https://angular.dev'
+    url: '/home'
   },
   {
     id: 2,
+    color: 'primary',
     label: 'testimonials',
-    link: 'https://angular.dev/tutorials'
+    url: '/home'
   },
   {
     id: 3,
+    color: 'primary',
     label: 'Sponsor',
-    link: 'https://angular.dev/tools/cli'
+    url: '/home'
   },
   {
     id: 4,
+    color: 'primary',
     label: 'Blog',
-    link: 'https://angular.dev/tools/cli'
+    url: '/home'
   },
   {
     id: 5,
+    color: 'primary',
     label: 'Join Discord',
-    link: 'https://angular.dev/tools/cli'
+    url: '/home'
   }
 ];
+
+export const MENU_END: IntMenu = {
+  id: 1,
+  color: 'primary',
+  label: 'Download Now',
+  url: '/home'
+};

@@ -13,6 +13,8 @@
   justify-content: space-between;
   top: 0;
   align-items: center;
+  padding-right: 5rem;
+  padding-left: 5rem;
 }
 
 .container-menu > div {
@@ -22,11 +24,11 @@
 
 .container-menu > div > span {
   color: var(--color-white);
-  padding-right: 50px;
+  padding-right: 5rem;
 }
 
 .sidenav {
-  width: 200px;
+  width: 15rem;
 }
 
 .sidenav .mat-toolbar {
@@ -34,7 +36,15 @@
 }
 
 @include mobile-media {
+  .container-menu {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }
 
 @include tablet-media {
+  .container-menu {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
 }

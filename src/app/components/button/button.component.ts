@@ -10,9 +10,9 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './button.component.scss'
 })
 export class ButtonComponent {
-  @Input() button_name!: string;
-  @Input() button_color!: 'primary' | 'accent' | 'warn';
-  @Input() button_name_icon!: string;
+  @Input() btn_name!: string;
+  @Input() btn_color!: 'primary' | 'accent' | 'warn';
+  @Input() btn_name_icon!: string;
   @Input() btn_class_color_text!:
     | 'btn-color-white'
     | 'btn-color-primary'

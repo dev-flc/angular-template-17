@@ -1,17 +1,18 @@
 import { ButtonComponent } from '@/app/components/button/button.component';
-import { DOCUMENTS_HOME } from '@/app/constants/home';
+import { MENU_END } from '@/app/constants/navigation';
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ButtonComponent],
+  imports: [ButtonComponent, MatButtonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
   title = '{ dev : F.L.C }';
-  home_documents = DOCUMENTS_HOME;
+  data_end = MENU_END;
   onClickReft(url: string) {
     console.log(
       '%curl==>',

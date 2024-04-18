@@ -20,10 +20,17 @@ h1 {
   color: var(--color-white);
 }
 
+h1 span {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--color-secondary);
+}
+
 p {
   line-height: 2rem;
   font-size: clamp(1rem, 2.5vw, 1.125rem);
   font-weight: 500;
-  color: var(--color-secondary);
+  color: var(--color-black);
   max-width: clamp(23rem, 50vw, 70rem);
 }
