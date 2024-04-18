@@ -3,6 +3,23 @@
 @include mat.core();
 
 :root {
+  .btn-rounded {
+    border-radius: 9999px;
+    margin: 0.2rem;
+  }
+  .btn-color-white {
+    color: var(--color-white) !important;
+  }
+
+  .btn-color-primary {
+    color: var(--color-primary) !important;
+  }
+  .btn-colot-accent {
+    color: var(--color-accent) !important;
+  }
+  .btn-color-warning {
+    color: var(--color-warn) !important;
+  }
   .--ocean {
     background-image: linear-gradient(to bottom right, #5b7fff, #33ccfc);
   }
@@ -24,20 +41,25 @@
   .--peach {
     background-image: linear-gradient(to bottom right, #ff6868, #ff68de);
   }
+  .--other {
+    background-image: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  }
 
-  --color-primary: #5dade2;
-  --color-accent: #58d68d;
+  --color-primary: #58d68d;
+  --color-accent: #5dade2;
   --color-warn: #e74c3c;
+  --color-secondary: #f49867;
   --color-white: #ffffff;
+  --color-black: #403f44;
 }
 
-$color-primary: (
+$color-accent: (
   50: #ecf5fc,
   100: #cee6f6,
   200: #aed6f1,
   300: #8ec6eb,
   400: #75b9e6,
-  500: var(--color-primary),
+  500: var(--color-accent),
   600: #55a6df,
   700: #4b9cda,
   800: #4193d6,
@@ -64,14 +86,14 @@ $color-primary: (
   )
 );
 
-$color-accent: (
+$color-primary: (
   50: #ebfaf1,
   100: #cdf3dd,
   200: #acebc6,
   300: #8ae2af,
   400: #71dc9e,
   500: #58d68d,
-  600: var(--color-accent),
+  600: var(--color-primary),
   700: #47cc7a,
   800: #3dc670,
   900: #2dbc5d,

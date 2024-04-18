@@ -9,44 +9,52 @@
   >
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      @for (data of data_menu; track data.id) {
-        <a mat-list-item href="#">{{ data.label }}</a>
+      @for (item_start of data_start; track item_start.id) {
+        <a mat-list-item href="{{ item_start.url }}">{{ item_start.label }}</a>
       }
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar class="container-menu">
       <div>
-        <span>{{ '{ dev: F.L.C }' }}</span>
+        <span>
+          {{ '{ dev: F.L.C }' }}
+        </span>
         @if (
           (currentBreakpoint$ | async) === 'Large' ||
           (currentBreakpoint$ | async) === 'XLarge'
         ) {
-          @for (data of data_menu; track data.id) {
-            <app-button
-              button_name="{{ data.label }}"
-              (click)="drawer.toggle()"
-              btn_class_color_text="btn-color-white"
-            ></app-button>
+          @for (item_start of data_start; track item_start.id) {
+            <a
+              mat-button
+              class="btn-color-white btn-rounded"
+              href="{{ item_start.url }}"
+              >{{ item_start.label }}</a
+            >
           }
         }
       </div>
       <div>
-        <app-button
-          button_name="Download Now"
-          (click)="drawer.toggle()"
-          btn_class_color_text="btn-color-white"
-        ></app-button>
+        <a
+          mat-flat-button
+          href="{{ data_end.url }}"
+          color="{{ data_end.color }}"
+          class="btn-rounded"
+          >{{ data_end.label }}</a
+        >
         @if (
           (currentBreakpoint$ | async) === 'Medium' ||
           (currentBreakpoint$ | async) === 'Small' ||
           (currentBreakpoint$ | async) === 'XSmall'
         ) {
-          <app-button
+          <button
+            mat-icon-button
             (click)="drawer.toggle()"
-            button_name_icon="menu"
-            btn_class_color_text="btn-color-white"
-          ></app-button>
+            aria-label="Menu"
+            class="btn-color-white"
+          >
+            <mat-icon>menu</mat-icon>
+          </button>
         }
       </div>
     </mat-toolbar>

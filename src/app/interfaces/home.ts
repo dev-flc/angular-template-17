@@ -1,5 +1,5 @@
 export interface HomeDocument {
   title: string;
-  link: string;
+  url: string;
   color: 'primary' | 'accent' | 'warn';
 }

@@ -1,4 +1,4 @@
-import { MENU_NAV } from '@/app/constants/navigation';
+import { MENU_END, MENU_START } from '@/app/constants/navigation';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { AsyncPipe } from '@angular/common';
 import { Component, inject } from '@angular/core';
@@ -10,7 +10,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterOutlet } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
-import { ButtonComponent } from '../button/button.component';
 
 @Component({
   selector: 'app-navigation',
@@ -24,12 +23,12 @@ import { ButtonComponent } from '../button/button.component';
     MatSidenavModule,
     MatListModule,
     MatIconModule,
-    AsyncPipe,
-    ButtonComponent
+    AsyncPipe
   ]
 })
 export class NavigationComponent {
-  data_menu = MENU_NAV;
+  data_start = MENU_START;
+  data_end = MENU_END;
   private breakpointObserver = inject(BreakpointObserver);
 
   // #region breakpoint
