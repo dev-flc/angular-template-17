@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve -c development -o",
+    "start": "ng serve --host 192.168.1.82 -c development -o",
     "build": "ng build -c production",
     "watch": "ng build -w -c development",
     "prettier": "npx prettier --write .",
