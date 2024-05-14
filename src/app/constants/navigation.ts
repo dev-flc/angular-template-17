@@ -4,32 +4,32 @@ export const MENU_START: IntMenu[] = [
   {
     id: 1,
     color: 'primary',
-    label: 'Feactures',
+    label: 'Home',
     url: '/home'
   },
   {
     id: 2,
     color: 'primary',
-    label: 'testimonials',
-    url: '/home'
+    label: 'Example',
+    url: '/example'
   },
   {
     id: 3,
     color: 'primary',
     label: 'Sponsor',
-    url: '/home'
+    url: '/sponsor'
   },
   {
     id: 4,
     color: 'primary',
     label: 'Blog',
-    url: '/home'
+    url: '/blog'
   },
   {
     id: 5,
     color: 'primary',
     label: 'Join Discord',
-    url: '/home'
+    url: '/discord'
   }
 ];
 

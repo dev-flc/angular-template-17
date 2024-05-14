@@ -36,6 +36,10 @@
   color: var(--color-primary);
 }
 
+.mat-mdc-list-item {
+  border: none;
+}
+
 @include mobile-media {
   .container-menu {
     padding-right: 1rem;

@@ -7,7 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
@@ -30,6 +30,12 @@ export class NavigationComponent {
   data_start = MENU_START;
   data_end = MENU_END;
   private breakpointObserver = inject(BreakpointObserver);
+
+  constructor(private router: Router) {}
+
+  openNewBusiness(path: string) {
+    this.router.navigate([path]);
+  }
 
   // #region breakpoint
   currentBreakpoint$: Observable<string> = this.breakpointObserver

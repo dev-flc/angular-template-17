@@ -10,7 +10,9 @@
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
       @for (item_start of data_start; track item_start.id) {
-        <a mat-list-item href="{{ item_start.url }}">{{ item_start.label }}</a>
+        <button mat-list-item (click)="openNewBusiness(item_start.url)">
+          {{ item_start.label }}
+        </button>
       }
     </mat-nav-list>
   </mat-sidenav>
@@ -25,23 +27,25 @@
           (currentBreakpoint$ | async) === 'XLarge'
         ) {
           @for (item_start of data_start; track item_start.id) {
-            <a
+            <button
               mat-button
               class="btn-color-white btn-rounded"
-              href="{{ item_start.url }}"
-              >{{ item_start.label }}</a
+              (click)="openNewBusiness(item_start.url)"
             >
+              {{ item_start.label }}
+            </button>
           }
         }
       </div>
       <div>
-        <a
+        <button
           mat-flat-button
-          href="{{ data_end.url }}"
+          (click)="openNewBusiness(data_end.url)"
           color="{{ data_end.color }}"
           class="btn-rounded"
-          >{{ data_end.label }}</a
         >
+          {{ data_end.label }}
+        </button>
         @if (
           (currentBreakpoint$ | async) === 'Medium' ||
           (currentBreakpoint$ | async) === 'Small' ||
