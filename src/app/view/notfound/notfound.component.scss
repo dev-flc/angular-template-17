@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container div h2 {
+  font-size: 3rem;
+  margin: 10px;
+  color: var(--color-primary);
+}
+
+.container div img {
+  width: 30vh;
+  height: 30vh;
+}

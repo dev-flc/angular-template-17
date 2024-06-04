@@ -17,17 +17,15 @@
   padding-left: 5rem;
   width: 100%;
 }
-
 .container-menu > div {
   display: flex;
   align-items: center;
 }
 
-.container-menu > div > span {
-  color: var(--color-white);
-  padding-right: 5rem;
+.container-menu > div > img {
+  width: 50px;
+  height: 50px;
 }
-
 .sidenav {
   width: 15rem;
 }
